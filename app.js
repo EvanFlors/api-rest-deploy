@@ -28,6 +28,20 @@ app.use(cors({
     }
 }))
 
+app.get('/', (req, res) => {
+    const htmlResponse = `
+        <html>
+            <head>
+                <title>Movies API Rest</title>
+            </head>
+            <body>
+                <h1>Backend working</h1>
+            </body>
+        </html>
+    `
+    res.send(htmlResponse)
+})
+
 app.get('/movies', (req, res) => {
 
     // const origin = req.header('origin')
